@@ -1,5 +1,7 @@
 # lekcja 86
 sudo: required # okreslenie super-user permison (?)
+language: generic
+
 services:
   - docker
 
@@ -19,5 +21,5 @@ deploy: #lekcja 91 wyjaśnia - dodawania na aws
  on: # wskazanie w przypadku którego branchu ma następować automatyczne uruchomienie procesu.
   branch: master
 
-access_key_id: $AWS_ACCESS_KEY
-secret_access_key : "$AWS_SECRET_KEY"
+access_key_id: AWS_ACCESS_KEY
+secret_access_key : "AWS_SECRET_KEY"
