@@ -7,4 +7,17 @@ befor_install: # jak sama nazwa wskazuje
  - docker build -t topekkrol/docker-react -f Dockerfile.dev .
 
 script: # seria komend ktora zostanie wykonana podczas uruchomienia
-  - docker run -e CI=true topekkrol/docker-react npm run test
+ - docker run -e CI=true topekkrol/docker-react npm run test
+
+deploy: #lekcja 91 wyjaśnia - dodawania na aws
+ provider: elasticbeanstalk
+ region: "eu-north-1" # pochodzi to z linku aws elastic beanstalk
+ app: "Docker-kurs"
+ env: "Docker-kurs-env"
+ bucket_name: "elasticbeanstalk-eu-north-1-947554763986" #s3
+ bucker_path: "Docker-kurs" #s3
+ on: # wskazanie w przypadku którego branchu ma następować automatyczne uruchomienie procesu.
+  branch: master
+
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key : "$AWS_SECRET_KEY"
