@@ -20,6 +20,5 @@ deploy: #lekcja 91 wyjaśnia - dodawania na aws
  bucket_path: "Docker-kurs" #s3
  on: # wskazanie w przypadku którego branchu ma następować automatyczne uruchomienie procesu.
   branch: master
-
 access_key_id: AWS_ACCESS_KEY
 secret_access_key : "AWS_SECRET_KEY"
