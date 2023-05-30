@@ -15,7 +15,7 @@ deploy: #lekcja 91 wyjaśnia - dodawania na aws
  app: "Docker-kurs"
  env: "Docker-kurs-env"
  bucket_name: "elasticbeanstalk-eu-north-1-947554763986" #s3
- bucker_path: "Docker-kurs" #s3
+ bucket_path: "Docker-kurs" #s3
  on: # wskazanie w przypadku którego branchu ma następować automatyczne uruchomienie procesu.
   branch: master
 
