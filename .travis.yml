@@ -3,7 +3,7 @@ sudo: required # okreslenie super-user permison (?)
 services:
   - docker
 
-befor_install: # jak sama nazwa wskazuje
+before_install: # jak sama nazwa wskazuje
  - docker build -t topekkrol/docker-react -f Dockerfile.dev .
 
 script: # seria komend ktora zostanie wykonana podczas uruchomienia
